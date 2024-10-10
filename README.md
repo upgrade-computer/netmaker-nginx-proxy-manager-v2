@@ -1192,9 +1192,13 @@ volumes:
 
   
   Email : youremail@yourdomain.com
+  
   Use a DNS Challenge : YES
+  
   Choose provider / Provide API Keys or Logins
+  
   Propagation seconds : default
+  
   I Agree to the.. : YES
 
   
@@ -1202,36 +1206,58 @@ volumes:
 
   
 ###  4.2.1 - api.netmaker.domain.com
+
   Scheme : http
+  
   Address : virtual host address
+
   Forward Port : 8081
+  
   SSL : *.netmaker.domain.com
 
   
  ### 4.2.2 - broker.netmaker.domain.com
+ 
   Scheme : http
+  
   Address : virtual host address
+  
   Forward port : 8883
+  
   Websocket Support : YES
+  
   SSL : *.netmaker.domain.com
 
   
  ### 4.2.3 - dashboard.netmaker.domain.com
+ 
   Scheme : http
+  
   Address : virtual host address
+  
   Forward port : 80
+  
   SSL : *.netmaker.domain.com
 
   
 ###  4.2.4 - gprc.netmaker.domain.com
+
   Scheme : http
+  
   Address : virtual host address
+  
   Forward port : 50051
+  
   Custom Location : /
+  
   Scheme : http
+  
   Address : virtual host address 
+
   Forward port : 50051
+  
   Option :  grpc_pass <virtual-host-address>:50051;
+  
   SSL : *.netmaker.domain.com
   
   
@@ -1242,35 +1268,45 @@ volumes:
  ### 6 - Log In UI
   
   Connect to : dashboard.netmaker.domain.com
+  
   Create first user, it will be "Super Admin"
   
  ### 6.1 - Create a/some Network to join "self node" to it : 
   
   Create Network > Check IPV4 + IPV6 > Click "Autofill" > Name the network
+  
   Default access control : ALLOW
   
  ### 6.2 - Create an Enrollment Key 
   
   Enrollment Keys > Create Key :
+  
   Name : Enroll Key
+
   Type : <your-choice>
+  
   Network : Select network to join with this key
   
   Click on Create Key.
   
  ### 7 - Connect Self-Host to Networks : 
   
-  SSH on host, and run "netclient join -t <Join-Key>"
-  
+  SSH on host, and run :
+  ```
+  netclient join -t <Join-Key>"
+  ```
  ### 8 - Edit Host : 
   
   Hosts > Clic on "..." > Edit Host >
   
   - Check "Static Port"
+
   - Modify port, and open it on router to be routed to <Virtual Host IP>
+  
   - Verbosity : 4 (keep track of connexions, huge logging)
   
   - Check "Default Host"
+
   - Check "Auto Update"
   
 ###  9 - Add another network to Netmaker (cf 6.1)
@@ -1280,27 +1316,37 @@ volumes:
 ###  10.1 - Networks > Net-Just-Added > Hosts 
   
   --> Add Hosts 
+
   --> Add Existing Hosts 
+  
   --> Select host to add
   
 ###  10.2 - Networks > Net-Just-Added > Remote Access
   
   --> Create Gateway
+  
   --> "Host" : select host
+  
   --> Create Gateway
   
  ### 10.3 - Networks > > Net-Just-Added > Egress
   
   --> Create egress
+  
   --> Select an host
+  
   --> Enable NAT for Egress Traffic : YES
+  
   --> Create Egress
   
  ### 10.4 - Networks > > Net-Just-Added > Egress
   
   --> Add external route
+  
   --> Enable NAT for egress traffic : YES
+  
   --> +Add Range
+  
   --> Enter range to be accessed through this host (eg : 172.22.10.0/24)
   
   
@@ -1310,14 +1356,18 @@ volumes:
   
 ###  11 - Connect Another-Host to Networks : 
   
-  SSH on host, and run "netclient join -t <Join-Key>"
-  
+  SSH on host, and run : 
+  ```
+  netclient join -t <Join-Key>
+  ```
 ###  12 - Edit Host : 
   
   Hosts > Clic on "..." > Edit Host >
   
   - Check "Static Port"
+
   - Modify port, and open it on router to be routed to <Another-Host-IP>
+  
   - Verbosity : 4 (keep track of connexions, huge logging)
   
   - Check "Auto Update"
@@ -1327,27 +1377,37 @@ volumes:
 ###  13.1 - Networks > Net-Just-Added > Hosts 
   
   --> Add Hosts 
+  
   --> Add Existing Hosts 
+  
   --> Select Another-Host to add
   
  ### 13.2 - Networks > Net-Just-Added > Remote Access
   
   --> Create Gateway
+  
   --> "Host" : select Another-Host
+  
   --> Create Gateway
   
  ### 13.3 - Networks > Net-Just-Added > Egress
   
   --> Create egress
+  
   --> Select an host
+  
   --> Enable NAT for Egress Traffic : YES
+  
   --> Create Egress
   
  ### 13.4 - Networks > > Net-Just-Added > Egress
   
   --> Add external route
+  
   --> Enable NAT for egress traffic : YES
+  
   --> +Add Range
+  
   --> Enter range to be accessed through this host (eg : 172.30.10.0/24)
   
   

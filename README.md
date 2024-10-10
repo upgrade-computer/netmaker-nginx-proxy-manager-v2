@@ -1315,39 +1315,39 @@ volumes:
   
 ###  10.1 - Networks > Net-Just-Added > Hosts 
   
-  --> Add Hosts 
+  - Add Hosts 
 
-  --> Add Existing Hosts 
+  - Add Existing Hosts 
   
-  --> Select host to add
+  - Select host to add
   
 ###  10.2 - Networks > Net-Just-Added > Remote Access
   
-  --> Create Gateway
+  - Create Gateway
   
-  --> "Host" : select host
+  - "Host" : select host
   
-  --> Create Gateway
+  - Create Gateway
   
  ### 10.3 - Networks > > Net-Just-Added > Egress
   
-  --> Create egress
+  - Create egress
   
-  --> Select an host
+  - Select an host
   
-  --> Enable NAT for Egress Traffic : YES
+  - Enable NAT for Egress Traffic : YES
   
-  --> Create Egress
+  - Create Egress
   
  ### 10.4 - Networks > > Net-Just-Added > Egress
   
-  --> Add external route
+  - Add external route
   
-  --> Enable NAT for egress traffic : YES
+  - Enable NAT for egress traffic : YES
   
-  --> +Add Range
+  - +Add Range
   
-  --> Enter range to be accessed through this host (eg : 172.22.10.0/24)
+  - Enter range to be accessed through this host (eg : 172.22.10.0/24)
   
   
   -------------------------------------------
@@ -1376,38 +1376,38 @@ volumes:
   
 ###  13.1 - Networks > Net-Just-Added > Hosts 
   
-  --> Add Hosts 
+  - Add Hosts 
   
-  --> Add Existing Hosts 
+  - Add Existing Hosts 
   
-  --> Select Another-Host to add
+  - Select Another-Host to add
   
  ### 13.2 - Networks > Net-Just-Added > Remote Access
   
-  --> Create Gateway
+  - Create Gateway
   
-  --> "Host" : select Another-Host
+  - "Host" : select Another-Host
   
-  --> Create Gateway
+  - Create Gateway
   
  ### 13.3 - Networks > Net-Just-Added > Egress
   
-  --> Create egress
+  - Create egress
   
-  --> Select an host
+  - Select an host
   
-  --> Enable NAT for Egress Traffic : YES
+  - Enable NAT for Egress Traffic : YES
   
-  --> Create Egress
+  - Create Egress
   
  ### 13.4 - Networks > > Net-Just-Added > Egress
   
-  --> Add external route
+  - Add external route
   
-  --> Enable NAT for egress traffic : YES
+  - Enable NAT for egress traffic : YES
   
-  --> +Add Range
+  - +Add Range
   
-  --> Enter range to be accessed through this host (eg : 172.30.10.0/24)
+  - Enter range to be accessed through this host (eg : 172.30.10.0/24)
   
   
